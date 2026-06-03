@@ -6,7 +6,11 @@ Protótipo do site [Campari Bartenders](https://www.camparibartenders.com/). Rea
 
 **https://bianchinibruno.github.io/campari-bartenders/**
 
-Deploy automático a cada push na branch `master` via GitHub Actions.
+Site estático publicado na branch `gh-pages`. Para republicar após mudanças:
+
+```bash
+npm run deploy:pages
+```
 
 ## Stack
 
