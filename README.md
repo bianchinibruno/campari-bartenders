@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campari Bartenders — Protótipo
 
-## Getting Started
+Protótipo do site [Campari Bartenders](https://www.camparibartenders.com/). Readaptado ao conteúdo e estrutura do site atual (Wix), com melhorias de organização, visual premium e conversão.
 
-First, run the development server:
+## Preview (GitHub Pages)
+
+**https://bianchinibruno.github.io/campari-bartenders/**
+
+Deploy automático a cada push na branch `master` via GitHub Actions.
+
+## Stack
+
+- Next.js 16 (App Router)
+- Tailwind CSS v4
+- Componentes estilo shadcn/ui (Radix + CVA)
+- TypeScript
+
+## Como rodar
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Estrutura do site
 
-To learn more about Next.js, take a look at the following resources:
+Single-page com seções:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Seção | ID | Objetivo |
+|---|---|---|
+| Hero | `#hero` | Proposta de valor + CTAs |
+| Barra de confiança | — | WhatsApp, área, tipos de evento |
+| Por que Campari | `#por-que-campari` | 4 pilares + tipos de evento |
+| Pacotes | `#pacotes` | Essencial / Completo / Premium |
+| Especiarias | `#especiarias` | Diferencial interativo |
+| Carta de drinks | `#carta-drinks` | Tabs: clássicos, autorais, sem álcool |
+| Galeria | `#galeria` | 20 fotos filtráveis por evento |
+| Depoimentos | `#depoimentos` | Prova social (placeholders) |
+| FAQ | `#faq` | 8 perguntas de orçamento |
+| Orçamento | `#orcamento` | Formulário → WhatsApp deep link |
+| Validação | `#validacao` | Checklist vs 10 concorrentes |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Conteúdo placeholder
 
-## Deploy on Vercel
+Itens marcados para substituição antes de produção:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Galeria**: fotos do Unsplash (substituir por fotos reais do Instagram)
+- **Depoimentos**: textos ilustrativos (substituir por avaliações reais)
+- **Pacotes/preços**: valores sob consulta (sem preços fixos no protótipo)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Checklist de conversão (10/10)
+
+| Critério | Status |
+|---|---|
+| Hero com promessa + prova social | ✅ |
+| Pacotes nomeados e comparáveis | ✅ |
+| Tipos de evento segmentados | ✅ |
+| Depoimentos com nome e contexto | ✅ |
+| CTA WhatsApp + formulário | ✅ |
+| Consultoria (pacote Premium) | ✅ |
+| Galeria curada por evento | ✅ |
+| Área de atendimento explícita | ✅ |
+| Diferencial visual (especiarias) | ✅ |
+| FAQ de orçamento | ✅ |
+
+## Benchmark de concorrentes
+
+Mint Open Bar, Fera Bartenders, Operação Open Bar, Inove Bartenders, Flavor Wedding Bar, Severo Drinks, Bahrtenders, Dms Drinks, Suprema Caipira, TNT Bartender's.
+
+## Lighthouse (validação local)
+
+Após `npm run build && npm start`, rode no Chrome DevTools:
+
+1. Abra `http://localhost:3000`
+2. DevTools → Lighthouse → Mobile
+3. Verifique Performance, Accessibility, Best Practices, SEO
+
+Meta do protótipo: Accessibility e SEO acima de 90; Performance depende de rede (imagens Unsplash).
+
+## Nota legal
+
+Campari Bartenders é apresentada como marca independente de bartenders para eventos, sem vínculo com Campari Group.
